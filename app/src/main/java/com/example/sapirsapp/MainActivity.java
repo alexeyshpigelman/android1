@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private TextView textViewSets , textViewReps;
     private ProgressBar setsProgressBar , repsProgressBar;
     private SeekBar setsSeekBar , repsSeeBar;
-    private RatingBar RatingBarSpace;
+    private RatingBar ratingBarSpace;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         repsProgressBar = (ProgressBar) findViewById(R.id.repsProgressBar);
         repsSeeBar = (SeekBar) findViewById(R.id.repsSeekBar);
 
-
+        ratingBarSpace = (RatingBar) findViewById(R.id.ratingBar_space_luc);
 
         setsSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -84,6 +84,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
 
+        ratingBarSpace.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                Toast.makeText(MainActivity.this , (int) rating , Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
