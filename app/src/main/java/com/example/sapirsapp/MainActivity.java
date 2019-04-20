@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         repsSeeBar = (SeekBar) findViewById(R.id.repsSeekBar);
 
         ratingBarSpace = (RatingBar) findViewById(R.id.ratingBar_space_luc);
+        ratingBarSpace.setNumStars(5);
 
         setsSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -87,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         ratingBarSpace.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-                Toast.makeText(MainActivity.this , (int) rating , Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this , (int)rating , Toast.LENGTH_SHORT).show();
             }
         });
 
