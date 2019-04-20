@@ -134,6 +134,30 @@
         android:layout_centerVertical="true" />
 
     <TextView
+        android:id="@+id/training_method"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/training_with"
+        android:textColor="@color/colorText"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <CheckBox android:id="@+id/checkBox_coach"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/training_with_coach"
+        android:layout_gravity="center"
+        android:checked="false" />
+
+    <CheckBox android:id="@+id/checkBox_partner"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/training_with_partner"
+        android:layout_gravity="center"
+        android:checked="false" />
+
+    <TextView
         android:id="@+id/space_luc"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -150,5 +174,6 @@
         android:layout_gravity="center"
         android:numStars="5" />
 
+    
 
 </LinearLayout>

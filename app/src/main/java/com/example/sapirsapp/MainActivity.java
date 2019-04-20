@@ -11,6 +11,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
+import android.widget.CheckBox;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private TextView textViewSets , textViewReps;
     private ProgressBar setsProgressBar , repsProgressBar;
     private SeekBar setsSeekBar , repsSeeBar;
+    private CheckBox checkCoach,checkPartner;
     private RatingBar ratingBarSpace;
 
     @Override
@@ -45,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         textViewReps = (TextView) findViewById(R.id.number_of_reps_text);
         repsProgressBar = (ProgressBar) findViewById(R.id.repsProgressBar);
         repsSeeBar = (SeekBar) findViewById(R.id.repsSeekBar);
+
+        addListnerToCheckBox();
 
         ratingBarSpace = (RatingBar) findViewById(R.id.ratingBar_space_luc);
         ratingBarSpace.setNumStars(5);
@@ -112,6 +116,31 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         Toast.makeText(this, radioButton.getText(),
                 Toast.LENGTH_SHORT).show();
+    }
+
+    public void addListnerToCheckBox() {
+        checkCoach = (CheckBox)findViewById(R.id.checkBox_coach);
+        checkPartner = (CheckBox)findViewById(R.id.checkBox_partner);
+        checkCoach.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(((CheckBox)v).isChecked()) {
+                            Toast.makeText(MainActivity.this, checkCoach.getText() ,Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }
+        );
+        checkPartner.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(((CheckBox)v).isChecked()) {
+                            Toast.makeText(MainActivity.this, checkPartner.getText() ,Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }
+        );
     }
 
 

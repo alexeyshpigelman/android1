@@ -14,5 +14,8 @@
     <string name="anaerobic">Anaerobic</string>
     <string name="number_of_sets">Number of sets</string>
     <string name="number_of_reps">Number of reps</string>
+    <string name="training_with">Training with</string>
+    <string name="training_with_coach">Coach</string>
+    <string name="training_with_partner">Partner</string>
     <string name="space_luc">Space Luc</string>
 </resources>
